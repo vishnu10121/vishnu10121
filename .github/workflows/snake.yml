@@ -1,19 +1,4 @@
 
-# Setting up the Contribution Snake
-
-The snake animation isn't a plain image URL — GitHub doesn't generate it for you.
-It's produced by the `platane/snk` GitHub Action, which runs on a schedule in
-your **profile repo** (the one named exactly `vishnu10121`) and commits an SVG
-that your README then displays.
-
-## Steps
-
-1. In your repo `github.com/vishnu10121/vishnu10121`, create the file:
-   `.github/workflows/snake.yml`
-
-2. Paste this into it:
-
-```yaml
 name: Generate Snake
 
 on:
@@ -46,7 +31,7 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
+
 
 3. Commit and push it. Go to the **Actions** tab of the repo and run the
    `Generate Snake` workflow manually once (`Run workflow` button) so it
